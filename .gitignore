@@ -11,3 +11,9 @@ wheels/
 
 
 .idea
+
+
+# Project 01: Auto-Screenshot Outputs
+**/shots/
+**/screenshots/
+**/automated_screenshots/

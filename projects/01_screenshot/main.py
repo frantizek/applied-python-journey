@@ -19,15 +19,15 @@ DEFAULT_TIME_BETWEEN_SCREENSHOTS = 300  # Expressed in seconds, meaning 5 minute
 
 
 def main():
-    while True:
-        directory_storing_screenshots = "automated_screenshots"
-        my_dir = Path(directory_storing_screenshots)
-        try:
-            my_dir.mkdir()
-            print(f"Directory {directory_storing_screenshots} created.")
-        except FileExistsError:
-            print(f"Directory {directory_storing_screenshots} already exists.")
+    directory_storing_screenshots = "automated_screenshots"
+    my_dir = Path(directory_storing_screenshots)
+    try:
+        my_dir.mkdir()
+        print(f"Directory {directory_storing_screenshots} created.")
+    except FileExistsError:
+        print(f"Directory {directory_storing_screenshots} already exists.")
 
+    while True:
         file_name = time.strftime("%Y-%m-%d_%H-%M-%S") + ".png"
 
         pyautogui.screenshot(my_dir.joinpath(file_name))
